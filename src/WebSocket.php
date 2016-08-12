@@ -1,6 +1,6 @@
-<?php namespace WebsocketS2C;
+<?php namespace WebSocketS2C;
 
-use WebsocketS2C\Frame as WebsocketFrame;
+use WebSocketS2C\Frame as WebsocketFrame;
 
 use Exception;
 

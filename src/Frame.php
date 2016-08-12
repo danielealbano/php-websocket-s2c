@@ -1,4 +1,4 @@
-<?php namespace WebsocketS2C;
+<?php namespace WebSocketS2C;
 
 use Exception;
 

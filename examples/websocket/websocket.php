@@ -7,7 +7,7 @@ require_once('../../src/WebSocket.php');
 require_once('../../src/Frame.php');
 
 // Instanciate the websocket
-$ws = new WebsocketS2C\WebSocket();
+$ws = new WebSocketS2C\WebSocket();
 
 // Check if it is a websocket
 if ($ws->isWebsocket() == false) {
