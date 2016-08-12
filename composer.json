@@ -1,0 +1,27 @@
+{
+	"name": "danielesalvatorealbano/php-websocket-s2c",
+	"description": "",
+	"version": "0.3.0",
+	"type": "library",
+	"keywords": [ "php", "websocket", "apache", "nginx", "lighttpd", "server", "json" ],
+	"homepage": "https://github.com/danielealbano/php-websocket-s2c",
+	"authors": [
+		{
+            "name": "Daniele Salvatore Albano",
+            "email": "d.albano@gmail.com",
+            "role": "Developer"
+		}
+	],
+	"support": 
+	{
+		"issues": "https://github.com/danielealbano/php-websocket-s2c/issues",
+		"wiki": "https://github.com/danielealbano/php-websocket-s2c/wiki",
+		"docs": ""
+	},
+    "autoload": {
+        "psr-4": {
+            "WebSocketS2C\\": "src/"
+        }
+    },
+    "license": "Apache-2.0"
+}

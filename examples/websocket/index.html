@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div class="content"></div>
+		<script type="text/javascript">
+			window.onload = function() {
+				var pathParts = window.location.pathname.split('/'); pathParts.pop();
+				var wsUrl = 'ws://' + window.location.host + pathParts.join('/') + '/websocket.php';
+				
+				var ws = new WebSocket(wsUrl);
+				
+				ws.onopen = function (event) {
+					document.querySelector('.content').innerHTML += '<strong>&raquo; CONNECTED</strong><br /><br />';
+				};
+				
+				ws.onmessage = function (event) {
+					document.querySelector('.content').innerHTML += '<strong>&raquo; NEW MESSAGE</strong><br />';
+					document.querySelector('.content').innerHTML += '<span style="background-color: #ddd; font-family: courier; display: block;">' + event.data + '</span><br />';
+
+					try {
+						var temp = JSON.parse(event.data);
+						document.querySelector('.content').innerHTML += 'VALID JSON<br />';
+					} catch(e) {
+						// do nothing
+					}
+
+					document.querySelector('.content').innerHTML += '<br />';
+				}
+				
+				ws.onclose = function (event) {
+					document.querySelector('.content').innerHTML += '<strong>&raquo; CLOSED</strong><br /><br />';
+				}
+			};
+		</script>
+	</body>
+</html>
