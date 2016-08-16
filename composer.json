@@ -1,7 +1,7 @@
 {
 	"name": "danielealbano/php-websocket-s2c",
 	"description": "",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"type": "library",
 	"keywords": [ "php", "websocket", "apache", "nginx", "lighttpd", "server", "json" ],
 	"homepage": "https://github.com/danielealbano/php-websocket-s2c",
